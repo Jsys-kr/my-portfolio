@@ -1,0 +1,68 @@
+/* styles.css */
+:root {
+    --primary-color: #2A2F4F;
+    --secondary-color: #917FB3;
+    --accent-color: #E5BEEC;
+    --light-bg: #FDE2F3;
+    --dark-bg: #1a1a1a;
+    --dark-text: #ffffff;
+}
+
+/* 다크 모드 스타일 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: var(--dark-bg);
+        color: var(--dark-text);
+    }
+
+    .project-card {
+        background: #2d3436;
+    }
+
+    .tech-stack span {
+        background: #3d4549;
+        color: var(--dark-text);
+    }
+
+    .btn.outline {
+        border-color: var(--dark-text);
+        color: var(--dark-text);
+    }
+}
+
+/* 이미지 최적화 스타일 */
+.card-image img {
+    transition: transform 0.3s ease;
+    border-radius: 8px 8px 0 0;
+}
+
+.project-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+/* 임베드 프레임 스타일 */
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 1rem 0;
+}
+
+.embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* 성능 최적화 */
+img {
+    will-change: transform;
+}
+
+/* GitHub Pages 설정 */
+/* 루트 디렉토리에 .nojekyll 파일 생성 필요 */
